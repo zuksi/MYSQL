@@ -1,0 +1,40 @@
+> SADD 1_visit 98.3.25.127 135.205.121.204 154.249.156.165 32.116.223.8
+> SADD 2_visits 33.131.72.238 116.65.46.62
+> SADD 3_visits 6.18.121.42 91.185.218.154 10.95.55.19
+
+> SMEMBERS 1_visit
+> SMEMBERS 2_visits
+> SMEMBERS 3_visits
+
+> SISMEMBER SUNION 1 visit 2 visits 3 visits 33.121.72.238
+
+> SISMEMBER visits 55.207.15.37
+
+> SMEMBERS 1_visit
+
+> SISMEMBER visits 135.205.121.204
+> SISMEMBER 1_visit 135.205.121.204
+
+> SMOVE 1_visit 2_visits 135.205.121.204
+
+> SMEMBERS 1_visit
+> SMEMBERS 2_visits
+
+
+> HMSET users:1 name Alex email Alexgoth@gmail.com
+> HMSET users:2 name Sonia email Sontare@gmail.com
+> HMSET users:3 name Peter email Iampete@gmail.com
+
+> SADD name:Alex Alexgoth@gmail.com
+> SADD name:Sonia Sontare@gmail.com
+> SADD name:Peter Iampete@gmail.com
+
+> SADD email:Alexgoth@gmail.com Alex
+> SADD email:Sontare@gmail.com Sonia
+> SADD email:Iampete@gmail.com Peter 
+
+> SMEMBERS name:Alex
+> SMEMBERS email:Sontare@gmail.com
+
+
+
